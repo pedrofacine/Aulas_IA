@@ -71,3 +71,22 @@ C)
 '''
 
 #4)
+print("---cont de valores ausentes---")
+print(df.isnull().sum().sum())
+
+'''
+C)
+    a) Não, não possui dados faltantes
+    
+    b) Eliminar reduz a quantidade de dados descartando a linha inteira. Substituir mantém
+       o volume de dados ao preencher a lacuna com uma estimativa matemática.
+    
+    c) Quando a variável possui muitos valores extremos, pois eles puxam e distorcem o valor da média.
+    
+    d) Porque a mediana não é afetada por outliers, sendo uma medida mais segura para dados com distribuição assimétrica
+    
+    e) Perda de informações úteis, o que pode prejudicar o aprendizado e reduzir a precisão do modelo.
+
+'''
+
+#5)
