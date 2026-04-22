@@ -1,6 +1,8 @@
 import sklearn
 from sklearn.datasets import load_breast_cancer
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 #1)
 dataset = load_breast_cancer()
@@ -90,3 +92,26 @@ C)
 '''
 
 #5)
+
+atributos_preditores = df.drop(columns=['target'])
+matriz_corr = atributos_preditores.corr()
+
+plt.figure(figsize=(10, 8))
+sns.heatmap(matriz_corr, annot=False, cmap='coolwarm')
+plt.title("Mapa de Calor de Correlação")
+plt.show()
+
+'''
+E)
+    a) Quando uma aumenta, a outra também aumenta ou diminui proporcionalmente).
+
+    b) Não, duas variaveis podem crescer juntas por coincidência ou por causa de um terceiro fator oculto, sem que uma seja
+     a causa direta da outra.
+    
+    c) Porque eles entregam a mesma informação matemática para o modelo de aprendizado, aumentando o custo
+     computacional sem agregar novo poder de previsão.
+    
+    d) A correlação tradicional mede apenas relações lineares. Ela pode falhar em identificar padrões complexos
+     ou relacionamentos não lineares entre os dados.
+
+'''
