@@ -3,6 +3,7 @@ from sklearn.datasets import load_breast_cancer
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
 #1)
